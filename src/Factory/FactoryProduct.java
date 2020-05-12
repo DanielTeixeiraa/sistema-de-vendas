@@ -19,10 +19,12 @@ public class FactoryProduct {
                 listProduct.add(new Electronic.ElectronicBuilder().nome("radio").id(2).price(1000).builder());
                 return listProduct;
             case STYLE:
-                listProduct.add(new Style.StyleBuilder().nome("Jordan").id(3).price(5000).builder());
+                listProduct.add(new Style.StyleBuilder().nome("Jordan").id(3).price(1000).builder());
+                listProduct.add(new Style.StyleBuilder().nome("Nike").id(4).price(1000).builder());
                 return listProduct;
             case HOME:
-                listProduct.add(new Home.HomeBuilder().nome("Monster").id(4).price(3000).builder());
+                listProduct.add(new Home.HomeBuilder().nome("Monster").id(5).price(3000).builder());
+                listProduct.add(new Home.HomeBuilder().nome("Agua").id(6).price(2000).builder());
                 return listProduct;
             default:
                 return null;

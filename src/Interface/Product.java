@@ -7,4 +7,5 @@ public interface Product {
     public void sellProduct();
     public String getName();
     public double getPrice();
+    
 }

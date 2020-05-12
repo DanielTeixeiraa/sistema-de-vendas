@@ -1,7 +1,11 @@
 package Class;
 
-public class Client extends Person {
+import Interface.Product;
+import java.util.ArrayList;
+import java.util.List;
 
+public class Client extends Person {
+    private List<Product> lisCart = new ArrayList<>();
     private double cash;
 
     private Client(String name, int cpf, double cash, String address) {
@@ -46,6 +50,10 @@ public class Client extends Person {
         }
 
     }
+
+    public List<Product> getLisCart() {
+        return lisCart;
+    }
     
     
     public void print(){
@@ -53,6 +61,10 @@ public class Client extends Person {
         System.out.println("Name: "+name);
         System.out.println("Address :"+address);
         System.out.println("Cash: "+cash);
+    }
+    
+    public void cart(Product product){
+        lisCart.add(product);
     }
     
 

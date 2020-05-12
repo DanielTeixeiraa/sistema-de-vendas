@@ -5,6 +5,8 @@
  */
 package Class;
 
+import Enum.TypeProduct;
+import Factory.FactoryProduct;
 import Interface.Product;
 import Interface.Store;
 import java.util.ArrayList;
@@ -15,16 +17,22 @@ import java.util.List;
  * @author User
  */
 public class He4rtShoes implements Store {
-    private List<Product> listProduct;
+    private String name = "He4rtShoes";
 
+    FactoryProduct factoryProduct = new FactoryProduct();
+    List<Product> listProduct = factoryProduct.createProduct(TypeProduct.STYLE);
+    
     public He4rtShoes(List<Product> listProduct) {
         this.listProduct = listProduct;
     }
-    
+   @Override
+    public List<Product> getListProduct() {
+        return listProduct;
+    }
 
     @Override
     public String getNome() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return name;
     }
 
    @Override

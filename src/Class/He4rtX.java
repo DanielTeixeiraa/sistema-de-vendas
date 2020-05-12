@@ -5,6 +5,8 @@
  */
 package Class;
 
+import Enum.TypeProduct;
+import Factory.FactoryProduct;
 import Interface.Product;
 import Interface.Store;
 import java.util.ArrayList;
@@ -12,13 +14,19 @@ import java.util.List;
 
 
 public class He4rtX implements Store {
-    private List<Product> listProduct;
     private String nome = "He4rtX";
 
+    FactoryProduct factoryProduct = new FactoryProduct();
+    List<Product> listProduct = factoryProduct.createProduct(TypeProduct.ELECTRONIC);
+    
+    
     public He4rtX(List<Product> listProduct) {
         this.listProduct = listProduct;
     }
-
+    @Override
+    public List<Product> getListProduct() {
+        return listProduct;
+    }
 
     
 
